@@ -1,0 +1,1417 @@
+head	1.62;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.62
+date	2014.04.29.06.49.39;	author -;	state -;
+branches;
+next	1.61;
+
+1.61
+date	2014.04.29.06.44.10;	author -;	state -;
+branches;
+next	1.60;
+
+1.60
+date	2014.04.29.06.37.53;	author -;	state -;
+branches;
+next	1.59;
+
+1.59
+date	2014.04.29.06.32.45;	author -;	state -;
+branches;
+next	1.58;
+
+1.58
+date	2014.04.29.06.31.47;	author -;	state -;
+branches;
+next	1.57;
+
+1.57
+date	2014.04.29.06.31.30;	author -;	state -;
+branches;
+next	1.56;
+
+1.56
+date	2014.04.29.06.11.55;	author -;	state -;
+branches;
+next	1.55;
+
+1.55
+date	2014.04.29.06.11.11;	author -;	state -;
+branches;
+next	1.54;
+
+1.54
+date	2014.04.29.06.08.04;	author -;	state -;
+branches;
+next	1.53;
+
+1.53
+date	2014.04.29.05.49.14;	author -;	state -;
+branches;
+next	1.52;
+
+1.52
+date	2014.04.29.03.20.09;	author -;	state -;
+branches;
+next	1.51;
+
+1.51
+date	2014.04.29.03.16.33;	author -;	state -;
+branches;
+next	1.50;
+
+1.50
+date	2014.04.29.03.15.54;	author -;	state -;
+branches;
+next	1.49;
+
+1.49
+date	2014.04.29.03.14.47;	author -;	state -;
+branches;
+next	1.48;
+
+1.48
+date	2014.04.29.03.09.58;	author -;	state -;
+branches;
+next	1.47;
+
+1.47
+date	2014.04.29.03.08.21;	author -;	state -;
+branches;
+next	1.46;
+
+1.46
+date	2014.04.29.03.07.00;	author -;	state -;
+branches;
+next	1.45;
+
+1.45
+date	2014.04.29.02.54.04;	author -;	state -;
+branches;
+next	1.44;
+
+1.44
+date	2014.04.29.02.53.24;	author -;	state -;
+branches;
+next	1.43;
+
+1.43
+date	2014.04.29.02.51.42;	author -;	state -;
+branches;
+next	1.42;
+
+1.42
+date	2014.04.29.01.26.20;	author -;	state -;
+branches;
+next	1.41;
+
+1.41
+date	2014.04.29.01.25.13;	author -;	state -;
+branches;
+next	1.40;
+
+1.40
+date	2014.04.29.01.21.13;	author -;	state -;
+branches;
+next	1.39;
+
+1.39
+date	2014.04.29.01.12.19;	author -;	state -;
+branches;
+next	1.38;
+
+1.38
+date	2014.04.29.01.03.30;	author -;	state -;
+branches;
+next	1.37;
+
+1.37
+date	2014.04.29.00.59.07;	author -;	state -;
+branches;
+next	1.36;
+
+1.36
+date	2014.04.29.00.56.28;	author -;	state -;
+branches;
+next	1.35;
+
+1.35
+date	2014.04.29.00.55.53;	author -;	state -;
+branches;
+next	1.34;
+
+1.34
+date	2014.04.29.00.51.07;	author -;	state -;
+branches;
+next	1.33;
+
+1.33
+date	2014.04.29.00.27.33;	author -;	state -;
+branches;
+next	1.32;
+
+1.32
+date	2014.04.29.00.26.44;	author -;	state -;
+branches;
+next	1.31;
+
+1.31
+date	2014.04.29.00.23.47;	author -;	state -;
+branches;
+next	1.30;
+
+1.30
+date	2014.04.29.00.22.36;	author -;	state -;
+branches;
+next	1.29;
+
+1.29
+date	2014.04.29.00.20.51;	author -;	state -;
+branches;
+next	1.28;
+
+1.28
+date	2014.04.29.00.14.56;	author -;	state -;
+branches;
+next	1.27;
+
+1.27
+date	2014.04.28.23.59.46;	author -;	state -;
+branches;
+next	1.26;
+
+1.26
+date	2014.04.28.23.59.15;	author -;	state -;
+branches;
+next	1.25;
+
+1.25
+date	2014.04.28.23.58.06;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2014.04.28.23.23.00;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2014.04.28.23.16.24;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2014.04.28.13.40.45;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2014.04.28.13.39.59;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2014.04.28.13.30.16;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2014.04.28.13.29.09;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2014.04.28.13.28.38;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2014.04.28.13.27.38;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2014.04.28.13.26.24;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2014.04.28.13.13.45;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2014.04.28.13.12.43;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2014.04.28.13.11.57;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2014.04.28.13.03.09;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2014.04.28.13.02.42;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2014.04.28.12.49.59;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2014.04.28.12.45.51;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2014.04.28.12.34.28;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2014.04.28.12.29.19;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2014.04.28.12.28.09;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2014.04.28.12.17.24;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2014.04.28.07.13.14;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2014.04.28.07.12.15;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2014.04.28.07.11.49;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2014.04.28.07.10.41;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.62
+log
+@-
+@
+text
+@// $Id: edfile.java,v 1.61 2014-04-28 23:44:10-07 - - $
+// USER: KHOA LUONG USERNAME: kluon7
+import java.io.*;
+import java.util.Scanner;
+import static java.lang.System.*;
+
+class edfile{
+   public static int linesread = 0;
+   public static int lineswritten = 0;
+
+   public static void writefile(dllist lines, String filename){
+      PrintWriter outfile = null;
+      String newfile = filename;
+      try {
+         outfile = new PrintWriter(newfile);
+      }
+      catch (FileNotFoundException error) {
+         auxlib.exit_status = auxlib.EXIT_FAILURE;
+         auxlib.exit();
+      }
+      lines.setposition(dllist.position.FIRST);
+      while(!lines.isEnd()){
+         lines.printline();
+         lines.setposition(dllist.position.FOLLOWING);
+         lineswritten ++;
+      }
+      lines.printline();
+      lineswritten ++;
+      System.out.printf("%d lines written.\n", lineswritten);
+      outfile.close();
+   
+   }
+
+   public static void readfile(dllist lines, String filename){
+      try{
+      Scanner file = new Scanner (new File (filename));
+         while (file.hasNextLine()){
+            String line = file.nextLine();
+            lines.insert(line, dllist.position.FOLLOWING);
+            linesread ++;
+         }
+      }
+      catch (FileNotFoundException error){
+         auxlib.exit_status = auxlib.EXIT_FAILURE;
+         auxlib.exit();
+      }
+
+   }
+
+   public static void main (String[] args) {
+      boolean want_echo = false;
+      String filename = ""; 
+      if ( args.length == 1){
+         if ( args[0] == "-e"){
+            want_echo = true;
+         }
+         else {
+            filename = args[0];
+         }
+      }
+      else if ( args.length == 2){
+         if ( args[0] == "-e"){
+            want_echo = true;
+         }
+         filename = args[1];
+      }
+      else if ( args.length >= 3){
+         out.println("Input format:edfile [-e] [filename]");
+         auxlib.exit_status = auxlib.EXIT_FAILURE;
+         auxlib.exit();
+      }
+      dllist lines = new dllist ();
+      Scanner stdin = new Scanner (in);
+      readfile(lines, filename);
+         
+      
+      for (;;) {
+         out.printf ("%s: ", auxlib.program_name());
+         if (! stdin.hasNextLine()) break;
+         String inputline = stdin.nextLine();
+         if (want_echo) out.printf ("%s%n", inputline);
+         if (inputline.matches ("^\\s*$")) continue;
+         char command = inputline.charAt(0);
+         String insertline = inputline.substring(1);
+         switch (command) {
+            case '#': break;
+            case '$': lines.setposition(dllist.position.LAST);
+                      lines.printline();
+                      break;
+            case '*': lines.printall();
+                      break;
+            case '.': lines.printline();
+                      break;
+            case '0': lines.setposition(dllist.position.FIRST); 
+                      lines.printline();
+                      break;
+            case '<': lines.setposition(dllist.position.PREVIOUS);
+                      lines.printline(); 
+                      break;
+            case '>': lines.setposition(dllist.position.FOLLOWING);
+                      lines.printline();
+                      break;
+            case 'a': lines.insert(inputline.substring(1), 
+                      dllist.position.FOLLOWING);
+                      lines.printline(); 
+                      break;
+            case 'd': lines.delete();
+                      break;
+            case 'i': lines.insert(inputline.substring(1),
+                      dllist.position.PREVIOUS);
+                      lines.printline();
+                      break;
+            case 'r': readfile(lines, insertline);
+                      break;
+            case 'w': 
+                      break;
+            default : auxlib.STUB ("Print invalid command."); break;
+         }
+      }
+      auxlib.exit ();
+   }
+
+}
+
+@
+
+
+1.61
+log
+@-
+@
+text
+@d1 2
+a2 1
+// $Id: edfile.java,v 1.60 2014-04-28 23:37:53-07 - - $
+@
+
+
+1.60
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.59 2014-04-28 23:32:45-07 - - $
+a63 5
+         else{
+            out.println("Invalid condition");
+            auxlib.exit_status = auxlib.EXIT_FAILURE;
+            auxlib.exit();
+         }
+@
+
+
+1.59
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.58 2014-04-28 23:31:47-07 - - $
+d17 1
+a17 1
+         auxlib.exit_status = EXIT_FAILURE;
+d43 1
+a43 1
+         auxlib.exit_status = EXIT_FAILURE;
+d66 1
+a66 1
+            auxlib.exit_status = EXIT_FAILURE;
+d73 1
+a73 1
+         auxlib.exit_status = EXIT_FAILURE;
+@
+
+
+1.58
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.57 2014-04-28 23:31:30-07 - - $
+d67 1
+a67 1
+            euxlib.exit();
+@
+
+
+1.57
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.56 2014-04-28 23:11:55-07 - - $
+d72 1
+a72 1
+         out.println("Input format:edfile [-e] [filename]")
+@
+
+
+1.56
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.55 2014-04-28 23:11:11-07 - - $
+d17 2
+a18 1
+      //handle error
+d43 2
+a44 1
+         //print error
+d65 3
+a67 1
+            //print error
+d72 3
+a74 1
+         //print error
+d124 1
+a124 1
+      auxlib.STUB ("(eof)");
+@
+
+
+1.55
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.54 2014-04-28 23:08:04-07 - - $
+d38 1
+@
+
+
+1.54
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.53 2014-04-28 22:49:14-07 - - $
+d21 1
+a21 1
+         outfile.println(lines.printline());
+d25 1
+a25 1
+      outfile.println(lines.printline());
+@
+
+
+1.53
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.52 2014-04-28 20:20:09-07 - - $
+d7 24
+@
+
+
+1.52
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.51 2014-04-28 20:16:33-07 - - $
+d57 1
+d86 1
+a86 1
+            case 'r': 
+@
+
+
+1.51
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.50 2014-04-28 20:15:54-07 - - $
+d9 1
+d11 4
+a14 3
+      while (file.hasNextLine()){
+         String line = file.nextLine();
+         lines.insert(line, dllist.position.FOLLOWING);
+d16 4
+d47 1
+a47 10
+      try {
+         /*
+         Scanner file = new Scanner (new File (filename));
+         while (file.hasNextLine()){
+            String line = file.nextLine();
+          
+         lines.insert(line, dllist.position.LAST);
+         }
+         */
+         readfile(lines, filename);
+d49 1
+a49 5
+      }
+      catch ( FileNotFoundException error) {
+      //handle exception 
+      }
+
+d85 1
+a85 9
+            case 'r': Scanner insertfile = new Scanner(new File (inputline.substring(1)));
+                      int linesread = 0;
+                      while (insertfile.hasNextLine()){
+                         String insertline = insertfile.nextLine();
+                         lines.insert(insertline, 
+                         dllist.position.FOLLOWING);
+                         linesread ++;
+                      }
+                      System.out.println(linesread);
+@
+
+
+1.50
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.49 2014-04-28 20:14:47-07 - - $
+d9 1
+a9 1
+      Scanner file = new Scanner (new File (filename)):
+@
+
+
+1.49
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.48 2014-04-28 20:09:58-07 - - $
+d6 2
+a15 1
+class edfile{
+@
+
+
+1.48
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.47 2014-04-28 20:08:21-07 - - $
+d6 1
+a6 1
+   public static void readfile(dllist lines, String filename, dllist.position pos){
+d10 1
+a10 1
+         lines.insert(line, dllist.position pos);
+d49 1
+a49 1
+         readfile(lines, filename, dllist.position.LAST);
+@
+
+
+1.47
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.46 2014-04-28 20:07:00-07 - - $
+d10 1
+a10 1
+         lines.insert(line, pos);
+@
+
+
+1.46
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.45 2014-04-28 19:54:04-07 - - $
+d47 1
+d49 2
+a50 2
+         readfile(lines, filename, LAST);
+         }
+@
+
+
+1.45
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.44 2014-04-28 19:53:24-07 - - $
+d6 8
+d41 1
+d45 4
+a48 1
+            lines.insert(line, dllist.position.LAST);
+@
+
+
+1.44
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.43 2014-04-28 19:51:42-07 - - $
+d78 1
+a78 1
+            case 'r': Scanner insertfile = new Scanner(new File (inputline.subst                      ring(1)));
+@
+
+
+1.43
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.42 2014-04-28 18:26:20-07 - - $
+d78 1
+a78 2
+            case 'r': Scanner insertfile = null;
+                      insertfile = new Scanner(new File (inputline.substring(1))                      );
+@
+
+
+1.42
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.41 2014-04-28 18:25:13-07 - - $
+d79 1
+a79 1
+                      insertfile = new Scanner(inputline.substring(1));
+@
+
+
+1.41
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.40 2014-04-28 18:21:13-07 - - $
+a35 1
+            System.out.println(line);
+@
+
+
+1.40
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.39 2014-04-28 18:12:19-07 - - $
+d36 1
+@
+
+
+1.39
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.38 2014-04-28 18:03:30-07 - - $
+d36 1
+a36 1
+            lines.insert(line, dllist.position.FOLLOWING);
+d89 2
+a90 1
+            case 'w': auxlib.STUB ("Call w command function."); break;
+@
+
+
+1.38
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.37 2014-04-28 17:59:07-07 - - $
+d36 1
+a36 1
+            lines.insert(line, dllist.position.PREVIOUS);
+@
+
+
+1.37
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.35 2014-04-28 17:55:53-07 - - $
+d36 1
+a36 1
+            lines.insert(line, dllist.position.FOLLOWING);
+@
+
+
+1.36
+log
+@-
+@
+text
+@a55 1
+                      lines.setposition(dllist.position.LAST);
+@
+
+
+1.35
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.34 2014-04-28 17:51:07-07 - - $
+d36 1
+a36 1
+            lines.insert(line, dllist.position.PREVIOUS);
+@
+
+
+1.34
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.33 2014-04-28 17:27:33-07 - - $
+d36 1
+a36 1
+            lines.insert(line, dllist.position.FOLLOWING);
+@
+
+
+1.33
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.32 2014-04-28 17:26:44-07 - - $
+d36 1
+a36 1
+            lines.insert(line, dllist.position.PREVIOUS);
+@
+
+
+1.32
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.31 2014-04-28 17:23:47-07 - - $
+d36 1
+a36 1
+            lines.insert(line, dllist.position.FOLLOWING);
+@
+
+
+1.31
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.30 2014-04-28 17:22:36-07 - - $
+d36 1
+a36 1
+            lines.insert(line, dllist.position.PREVIOUS);
+@
+
+
+1.30
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.29 2014-04-28 17:20:51-07 - - $
+d36 1
+a36 1
+            dllist.insert(line, dllist.position.PREVIOUS);
+@
+
+
+1.29
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.28 2014-04-28 17:14:56-07 - - $
+a6 7
+   public static void readFile(Scanner inFile, String filename){
+      while (inFile.hasNextLine()){
+         String line = inFile.nextLine();
+         lines.insert(line, dllist.position.PREVIOUS);
+      }
+   }
+
+d36 1
+a36 1
+            lines.insert(line,dllist.position.PREVIOUS);
+@
+
+
+1.28
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.27 2014-04-28 16:59:46-07 - - $
+a38 1
+      Scanner input = null;
+d40 5
+a44 1
+         input = new Scanner(new File (filename));
+a48 2
+      readFile (input, filename);
+      input.close();
+@
+
+
+1.27
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.26 2014-04-28 16:59:15-07 - - $
+d10 1
+d46 2
+a47 2
+      //readFile (input, filename);
+      //input.close();
+@
+
+
+1.26
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.25 2014-04-28 16:58:06-07 - - $
+d89 2
+a90 1
+                         lines.insert(insertline, dllist.position.FOLLOWING);
+@
+
+
+1.25
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.23 2014-04-28 16:16:24-07 - - $
+d84 2
+a85 1
+            case 'r': Scanner insertfile = new Scanner(inputline.substring(1));
+@
+
+
+1.24
+log
+@-
+@
+text
+@d68 6
+a73 2
+            case '<': auxlib.STUB ("Call < command function."); break;
+            case '>': auxlib.STUB ("Call > command function."); break;
+d78 15
+a92 3
+            case 'd': auxlib.STUB ("Call d command function."); break;
+            case 'i': auxlib.STUB ("Call i command function."); break;
+            case 'r': auxlib.STUB ("Call r command function."); break;
+@
+
+
+1.23
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.22 2014-04-28 06:40:45-07 - - $
+d61 1
+@
+
+
+1.22
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.21 2014-04-28 06:39:59-07 - - $
+d58 1
+@
+
+
+1.21
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.20 2014-04-28 06:30:16-07 - - $
+d59 1
+a59 1
+            case '*': lines.print();
+@
+
+
+1.20
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.19 2014-04-28 06:29:09-07 - - $
+d61 2
+a62 1
+            case '.': auxlib.STUB ("Call . command function."); break;
+d64 1
+a64 1
+                      lines.print();
+d70 1
+a70 1
+                      lines.print(); 
+@
+
+
+1.19
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.18 2014-04-28 06:28:38-07 - - $
+d7 1
+a7 1
+   static void readFile(Scanner inFile, String filename){
+d45 2
+a46 2
+      readFile (input, filename);
+      input.close();
+@
+
+
+1.18
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.17 2014-04-28 06:27:38-07 - - $
+d8 1
+a8 1
+      while (input.hasNextLine()){
+@
+
+
+1.17
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.16 2014-04-28 06:26:24-07 - - $
+d8 1
+a8 1
+      while (inFile.hasNextLine()){
+@
+
+
+1.16
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.15 2014-04-28 06:13:45-07 - - $
+d63 1
+a63 1
+                      lines.printline();
+d69 1
+a69 1
+                      lines.printline(); 
+@
+
+
+1.15
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.14 2014-04-28 06:12:43-07 - - $
+a36 2
+      auxlib.STUB ("Check for -e option");
+      auxlib.STUB ("Load file from args filename, if any.");
+@
+
+
+1.14
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.13 2014-04-28 06:11:57-07 - - $
+d69 2
+a70 1
+            case 'a': lines.insert(inputline.substring(1), dllist.position.FOLLO                      WING);
+@
+
+
+1.13
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.12 2014-04-28 06:03:09-07 - - $
+d69 1
+a69 1
+            case 'a': lines.insert(inputline.substring(1), dllist.position.FOLLO                      WING;
+@
+
+
+1.12
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.11 2014-04-28 06:02:42-07 - - $
+d69 3
+a71 1
+            case 'a': auxlib.STUB ("Call a command function."); break;
+@
+
+
+1.11
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.10 2014-04-28 05:49:59-07 - - $
+d65 1
+a65 1
+                      printline();
+@
+
+
+1.10
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.9 2014-04-28 05:45:51-07 - - $
+d49 1
+a49 3
+   while (stdin.hasNextLine()) {
+      String line = stdin.nextLine();
+   }
+d64 2
+a65 1
+            case '0': System.out.println("cats");
+@
+
+
+1.9
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.8 2014-04-28 05:34:28-07 - - $
+d66 2
+a67 1
+            case '0': auxlib.STUB ("Call 0 command function."); break;
+@
+
+
+1.8
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.7 2014-04-28 05:29:19-07 - - $
+d63 1
+a63 4
+            case '*': while(input.hasNextLine){
+                         String line = input.nextLine();
+                         out.printf("%s\n",line);
+                      }
+@
+
+
+1.7
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.6 2014-04-28 05:28:09-07 - - $
+a6 1
+   public String line = "";
+d9 1
+a9 1
+         line = inFile.nextLine();
+d63 4
+a66 1
+            case '*': out.printf("%s\n",line);
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.5 2014-04-28 05:17:24-07 - - $
+d7 1
+d10 1
+a10 1
+         public String line = inFile.nextLine();
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.4 2014-04-28 00:13:14-07 - - $
+d9 1
+a9 2
+         String line = inFile.nextLine();
+         System.out.printf("%s\n", line);
+d63 2
+a64 1
+            case '*': auxlib.STUB ("Call * command function."); break;
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.3 2014-04-28 00:12:15-07 - - $
+d7 1
+a7 1
+   public void ReadFile(Scanner inFile, String filename){
+d41 1
+d43 1
+a43 1
+         Scanner inFile = new Scanner(new File (filename));
+d48 2
+d62 2
+a63 1
+            case '$': auxlib.STUB ("Call $ command function."); break;
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: edfile.java,v 1.2 2014-04-28 00:11:49-07 - - $
+d9 1
+a9 1
+         String line = input.nextLine();
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 2
+a2 2
+// $Id: edfile.java,v 1.1 2014-04-28 00:10:41-07 - - $
+import java.io.*l;
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 2
+a2 2
+// $Id: edfile.java,v 1.9 2014-04-15 19:24:24-07 - - $
+import java.io.*l
+@

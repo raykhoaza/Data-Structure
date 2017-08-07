@@ -1,0 +1,49 @@
+::::::::::::::::
+../.score/test1.rpn
+::::::::::::::::
+     1	# $Id: test1.rpn,v 1.1 2013-09-25 13:09:38-07 - - $
+     2	# tests for simple operators
+     3	# Note that # starts a comment to end of line.
+     4	34 .3 88 ; # should print 3 numbers
+     5	+ + ; # should print one sum
+     6	8 3 * 4 7 * + ; # should print one sum
+     7	3 10 - ; # should print a negative number
+     8	4 9 / ; #fraction
+     9	7 0 / ; # infinity
+    10	1e1000000 ; # infinity
+::::::::::::::::
+ctest1.output
+::::::::::::::::
+     1	the_stack=0x7fff9ef4d7a0, top=-1, number=34
+     2	the_stack=0x7fff9ef4d7a0, top=-1, number=0.3
+     3	the_stack=0x7fff9ef4d7a0, top=-1, number=88
+     4	the_stack=0x7fff9ef4d7a0, top=-1, oper=";"
+     5	the_stack=0x7fff9ef4d7a0, top=-1, oper="+"
+     6	the_stack=0x7fff9ef4d7a0, top=-1, oper="+"
+     7	the_stack=0x7fff9ef4d7a0, top=-1, oper=";"
+     8	the_stack=0x7fff9ef4d7a0, top=-1, number=8
+     9	the_stack=0x7fff9ef4d7a0, top=-1, number=3
+    10	the_stack=0x7fff9ef4d7a0, top=-1, oper="*"
+    11	the_stack=0x7fff9ef4d7a0, top=-1, number=4
+    12	the_stack=0x7fff9ef4d7a0, top=-1, number=7
+    13	the_stack=0x7fff9ef4d7a0, top=-1, oper="*"
+    14	the_stack=0x7fff9ef4d7a0, top=-1, oper="+"
+    15	the_stack=0x7fff9ef4d7a0, top=-1, oper=";"
+    16	the_stack=0x7fff9ef4d7a0, top=-1, number=3
+    17	the_stack=0x7fff9ef4d7a0, top=-1, number=10
+    18	the_stack=0x7fff9ef4d7a0, top=-1, oper="-"
+    19	the_stack=0x7fff9ef4d7a0, top=-1, oper=";"
+    20	the_stack=0x7fff9ef4d7a0, top=-1, number=4
+    21	the_stack=0x7fff9ef4d7a0, top=-1, number=9
+    22	the_stack=0x7fff9ef4d7a0, top=-1, oper="/"
+    23	the_stack=0x7fff9ef4d7a0, top=-1, oper=";"
+    24	the_stack=0x7fff9ef4d7a0, top=-1, number=7
+    25	the_stack=0x7fff9ef4d7a0, top=-1, number=0
+    26	the_stack=0x7fff9ef4d7a0, top=-1, oper="/"
+    27	the_stack=0x7fff9ef4d7a0, top=-1, oper=";"
+    28	the_stack=0x7fff9ef4d7a0, top=-1, number=inf
+    29	the_stack=0x7fff9ef4d7a0, top=-1, oper=";"
+::::::::::::::::
+ctest1.status
+::::::::::::::::
+     1	STATUS = 0

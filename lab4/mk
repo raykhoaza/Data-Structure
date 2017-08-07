@@ -1,0 +1,1 @@
+gcc -g -o0 -Wall -Wextra -std=gnu99 cmatch.c -o cmatch

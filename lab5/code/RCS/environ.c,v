@@ -1,0 +1,34 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.1
+date	2014.05.08.04.11.47;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@//KHOA LUONG KLUON7@@UCSC.EDU
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+
+extern char **environ;
+int main (int argc, char **argv){
+   for (int i=0;environ[1]!=NULL;i++){
+      printf("%s\n",environ[i]);
+   }
+}
+@

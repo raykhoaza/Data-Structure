@@ -1,0 +1,29 @@
+FILE -:
+total 278
+drwx------. 3  2048 Jan 28 17:59 .
+drwx------. 6  2048 Jan 28 17:54 ..
+drwx------. 2  2048 Jan 28 17:59 RCS
+-rwx------. 1 11676 Jan 28 17:59 catbychar
+-rw-------. 1  1561 Jan 28 17:59 catbychar.c
+-rw-------. 1   276 Jan 28 17:59 catbychar.c.log
+-rw-------. 1     0 Jan 28 17:59 catbychar.out
+-rw-------. 1 29147 Jan 28 17:37 catbychar.pdf
+-rw-------. 1 22370 Jan 28 17:37 catbychar.ps
+-rwx------. 1 11711 Jan 28 17:37 catbyline
+-rw-------. 1  1795 Jan 28 17:58 catbyline.c
+-rw-------. 1   276 Jan 28 17:37 catbyline.c.log
+-rw-------. 1   408 Jan 28 17:37 catbyline.out
+-rw-------. 1 28084 Jan 28 17:37 catbyline.pdf
+-rw-------. 1 21176 Jan 28 17:37 catbyline.ps
+-rwx------. 1 11604 Jan 28 17:37 getoptex
+-rw-------. 1  1936 Jan 28 17:37 getoptex.c
+-rw-------. 1   269 Jan 28 17:37 getoptex.c.log
+-rw-------. 1   119 Jan 28 17:37 getoptex.out
+-rw-------. 1 28015 Jan 28 17:37 getoptex.pdf
+-rw-------. 1 20974 Jan 28 17:37 getoptex.ps
+-rwx------. 1  8189 Jan 28 17:37 undefvar
+-rw-------. 1   570 Jan 28 17:37 undefvar.c
+-rw-------. 1   589 Jan 28 17:37 undefvar.c.log
+-rw-------. 1  5038 Jan 28 17:37 undefvar.out
+-rw-------. 1 34018 Jan 28 17:37 undefvar.pdf
+-rw-------. 1 26751 Jan 28 17:37 undefvar.ps

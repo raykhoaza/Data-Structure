@@ -1,0 +1,164 @@
+head	1.6;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.6
+date	2014.02.14.02.59.56;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2013.05.01.20.22.44;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2013.02.16.01.17.42;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2013.02.12.03.17.45;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2012.02.15.04.43.22;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2012.02.15.04.32.33;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@-
+@
+text
+@// $Id: queue.h,v 1.5 2013-05-01 13:22:44-07 - - $
+
+#ifndef __QUEUE_H__
+#define __QUEUE_H__
+
+#include <stdbool.h>
+
+typedef struct queue queue;
+typedef char *queue_item_t;
+
+queue *new_queue (void);
+
+void free_queue (queue*);
+
+void insert_queue (queue*, queue_item_t);
+
+queue_item_t remove_queue (queue*);
+
+bool isempty_queue (queue*);
+
+#endif
+
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: queue.h,v 1.4 2013-02-15 17:17:42-08 - - $
+d13 1
+a13 1
+void free_queue (queue *);
+d15 1
+a15 1
+void insert_queue (queue *, queue_item_t);
+d17 1
+a17 1
+queue_item_t remove_queue (queue *);
+d19 1
+a19 1
+bool isempty_queue (queue *);
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: queue.h,v 1.3 2013-02-11 19:17:45-08 - - $
+a20 2
+bool is_queue (queue *);
+
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+/* $Id: queue.h,v 1.2 2012-02-14 20:43:22-08 - - $ */
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+/* $Id: queue.h,v 1.1 2012-02-14 20:32:33-08 - - $ */
+d8 1
+a8 1
+typedef struct queue *queue_ref;
+d11 1
+a11 1
+queue_ref new_queue (void);
+d13 1
+a13 1
+void free_queue (queue_ref);
+d15 1
+a15 1
+void insert_queue (queue_ref, queue_item_t);
+d17 1
+a17 1
+queue_item_t remove_queue (queue_ref);
+d19 1
+a19 1
+bool isempty_queue (queue_ref);
+d21 1
+a21 1
+bool is_queue (queue_ref);
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+/* $Id: queue.h,v 1.1 2011-04-29 19:54:20-07 - - $ */
+d6 1
+a6 1
+#include "bool.h"
+@

@@ -1,0 +1,305 @@
+head	1.8;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.8
+date	2013.05.01.20.22.21;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2013.05.01.20.15.50;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2013.02.16.01.16.14;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2013.02.12.03.07.55;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2012.11.02.02.33.32;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2012.02.16.04.47.04;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2012.02.15.04.49.59;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2012.02.15.03.50.35;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.8
+log
+@-
+@
+text
+@// $Id: intx.c,v 1.7 2013-05-01 13:15:50-07 - - $
+
+#include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "intx.h"
+
+struct intx {
+   int value;
+};
+
+intx *new_intx (void) {
+   return new_int_intx (0);
+}
+
+intx *new_int_intx (int value) {
+   intx *this = malloc (sizeof (struct intx));
+   assert (this != NULL);
+   this->value = value;
+   return this;
+}
+
+void free_intx (intx *this) {
+   free (this);
+}
+
+int get_intx (intx *this) {
+   return this->value;
+}
+
+void put_intx (intx *this, int newvalue) {
+   this->value = newvalue;
+}
+
+// 
+// Notes that would normally not be put in the file:
+// 
+// A '.c' file always includes its own header.
+// 
+// The 'struct' definition itself is specified in the
+// implementation file.  Everything declared in the implementation
+// file is 'private'.  Never put field definitions in a header
+// file.
+// 
+
+@
+
+
+1.7
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: intx.c,v 1.6 2013-02-15 17:16:14-08 - - $
+a25 1
+   memset(this, 0, sizeof (struct intx));
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: intx.c,v 1.5 2013-02-11 19:07:55-08 - - $
+a9 2
+static char *intx_tag = "struct intx";
+
+a10 1
+   char *tag;
+d15 1
+a15 1
+   return new1_intx (0);
+d18 5
+a22 6
+intx *new1_intx (int initvalue) {
+   intx *tmp = malloc (sizeof (struct intx));
+   assert (tmp != NULL);
+   tmp->tag = intx_tag;
+   tmp->value = initvalue;
+   return tmp;
+a25 1
+   assert (is_intx (this));
+a30 1
+   assert (is_intx (this));
+a34 1
+   assert (is_intx (this));
+a37 5
+bool is_intx (intx *this) {
+   return this != NULL && this->tag == intx_tag;
+}
+
+// *****************************************************************
+d41 1
+a41 1
+// A `.c' file always includes its own header.
+d43 1
+a43 1
+// The `struct' definition itself is specified in the
+d45 1
+a45 1
+// file is `private'.  Never put field definitions in a header
+a47 18
+// A tag string is defined so that each structure can be identified
+// at runtime similar to the way that `System.identityHashCode' in
+// Java can identify the type of the object.  It is also cleared
+// out when freed to permit checking of dangling pointers.
+// 
+// The tag is static so it can't be accessed outside of this file.
+// Static variables work as in Java if one considers the `.c' file
+// to be a class.
+// 
+// The function memset(3) is used before free(3C) in order to avoid
+// having pointers into the object remain live and also to prevent
+// a dangling pointer from verifying true for `is_intx'.  It also
+// can be used for checking up on types when using `void*' for
+// `Object'.
+// 
+// All functions assert is_intx as a precondition if appropriate.
+// 
+// *****************************************************************
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+/* $Id: intx.c,v 1.4 2012-11-01 19:33:32-07 - - $ */
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+/* $Id: intx.c,v 1.3 2012-02-15 20:47:04-08 - - $ */
+d17 1
+a17 1
+intx_ref new_intx (void) {
+d21 6
+a26 6
+intx_ref new1_intx (int initvalue) {
+   intx_ref new = malloc (sizeof (struct intx));
+   assert (new != NULL);
+   new->tag = intx_tag;
+   new->value = initvalue;
+   return new;
+d29 1
+a29 1
+void free_intx (intx_ref this) {
+d35 1
+a35 1
+int get_intx (intx_ref this) {
+d40 1
+a40 1
+void put_intx (intx_ref this, int newvalue) {
+d45 1
+a45 1
+bool is_intx (intx_ref this) {
+d49 29
+a77 2
+/*
+*****************************************************************
+a78 28
+Notes that would normally not be put in the file:
+
+A `.c' file always includes its own header.
+
+The `struct' definition itself is specified in the
+implementation file.  Everything declared in the implementation
+file is `private'.  Never put field definitions in a header
+file.
+
+A tag string is defined so that each structure can be identified
+at runtime similar to the way that `System.identityHashCode' in
+Java can identify the type of the object.  It is also cleared
+out when freed to permit checking of dangling pointers.
+
+The tag is static so it can't be accessed outside of this file.
+Static variables work as in Java if one considers the `.c' file
+to be a class.
+
+The function memset(3) is used before free(3C) in order to avoid
+having pointers into the object remain live and also to prevent
+a dangling pointer from verifying true for `is_intx'.  It also
+can be used for checking up on types when using `void*' for
+`Object'.
+
+All functions assert is_intx as a precondition if appropriate.
+
+*****************************************************************
+*/
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+/* $Id: intx.c,v 1.2 2012-02-14 20:49:59-08 - - $ */
+a45 1
+   // LINTED (warning: assignment of 32-bit integer to 8-bit integer)
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+/* $Id: intx.c,v 1.1 2012-02-14 19:50:35-08 - - $ */
+d18 1
+a18 1
+   return new_intx1 (0);
+d21 1
+a21 1
+intx_ref new_intx1 (int initvalue) {
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+/* $Id: intx.c,v 1.1 2011-04-29 19:53:56-07 - - $ */
+d46 1
+@

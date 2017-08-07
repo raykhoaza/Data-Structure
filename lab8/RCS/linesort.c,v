@@ -1,0 +1,100 @@
+head	1.3;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.3
+date	2014.05.29.05.09.15;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2014.05.29.05.03.05;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2014.05.29.04.42.37;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@-
+@
+text
+@
+#include <assert.h>
+#include <libgen.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "inssort.h"
+
+int compare(const void *a, const void *b){
+   const char *aa = *(char **)a;
+   const char *bb = *(char **)b;
+   return strcmp(aa,bb);
+}
+         
+int main (int argc, char **argv) {
+   (void) argc;
+   (void) argv;
+   char err_buffer [256];
+   char err_buf_fmt[16];
+   char buffer[1000];
+   char *array[1000];
+   size_t count = 0;
+   sprintf (err_buf_fmt, "%%%lds", sizeof err_buffer - 1);
+   for (int linenr = 0 ;; linenr++) {
+      char *gotline = fgets(buffer, sizeof buffer, stdin);
+      if (gotline == NULL) break;
+      char *nlpos = strchr (buffer, '\n');
+      if(nlpos != NULL){
+         *nlpos = '\0';
+      }
+      char *temp = strdup(gotline);
+      array[linenr] = temp;
+      count++;
+   }
+   inssort(array, count, sizeof(char *), compare);
+   for (size_t i = 0; i < count; i++){
+      printf("%s\n", array[i]);
+   }
+   
+   return EXIT_SUCCESS;
+}
+@
+
+
+1.2
+log
+@-
+@
+text
+@d9 1
+a9 1
+int comparelines(const void *a, const void *b){
+d35 1
+a35 1
+   inssort(array, count, sizeof(char *), comparelines);
+@
+
+
+1.1
+log
+@-
+@
+text
+@a0 1
+// $ Anan Ma awma@@unix.ic.ucsc.edu: linesort.c $
+a33 1
+      //free(temp);
+@

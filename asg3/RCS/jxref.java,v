@@ -1,0 +1,502 @@
+head	1.18;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.18
+date	2014.05.13.08.27.24;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2014.05.12.11.01.02;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2014.05.12.10.31.09;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2014.05.12.10.21.07;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2014.05.12.09.57.17;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2014.05.12.09.52.56;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2014.05.12.08.38.06;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2014.05.12.07.58.33;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2014.05.12.07.03.43;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2014.05.12.06.39.56;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2014.05.12.06.37.09;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2014.05.12.05.55.39;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2014.05.12.05.25.47;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2014.05.12.05.16.16;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2014.05.12.05.09.45;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2014.05.12.04.25.43;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2014.05.12.04.18.12;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2014.05.12.04.17.22;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.18
+log
+@-
+@
+text
+@// $Id: jxref.java,v 1.17 2014-05-12 04:01:02-07 - - $
+//NAME: KHOA LUONG USERNAME: KLUON7@@UCSC.EDU
+import java.io.*;
+import java.util.Scanner;
+import static java.lang.System.*;
+import java.util.*;
+
+class jxref {
+   static boolean debug = false;
+   static boolean lowercase = false;
+   static final String STDIN_NAME = "-";
+
+   static class printer implements visitor <String, queue <Integer>> {
+      public void visit (String key, queue <Integer> value) {
+         System.out.printf ("%s %s", key, value);
+         for (int linenr: value) out.printf (" %d", linenr);
+         System.out.printf ("%n");
+      }
+   }
+   
+   static void options(String option){
+      if(option.contains("d")) {debug = true;}
+      if(option.contains("f")) {lowercase = true;}
+   }
+
+   static void xref_file (String filename, Scanner scan) {
+      treemap <String, queue <Integer>> map =
+      new treemap <String, queue <Integer>> ();
+      queue<Integer> numberqueue = new queue<Integer>();
+      for (int linenr = 1; scan.hasNextLine (); ++linenr){
+         for (String word: scan.nextLine().split ("\\W+")) {
+            if (word.matches ("^\\d*$")) continue;
+            if (lowercase){
+               word = word.toLowerCase();
+            }
+            numberqueue = map.get(word);
+            if (numberqueue!=null){
+               numberqueue.insert(linenr);
+            }
+            else { 
+               numberqueue = new queue<Integer>();
+               map.put(word, numberqueue);
+               numberqueue.insert(linenr);
+            }
+         }
+      }
+      if(debug){
+         map.debug_dump();
+         return;
+      }
+      visitor <String, queue <Integer>> print_fn = new printer ();
+      map.do_visit (print_fn);
+   }
+
+   public static void main (String[] args) {
+      if (args[0].charAt(0)=='-'){options(args[0]);}
+      if(args.length == 0) {
+         xref_file (STDIN_NAME, new Scanner (in));
+      }else {
+         for (int argi = 0; argi < args.length; ++argi) {
+            String filename = args[argi];
+            if (filename.equals (STDIN_NAME)) {
+               xref_file (STDIN_NAME, new Scanner (in));
+            }else {
+               try {
+                  Scanner scan = new Scanner (new File (filename));
+                  System.out.println();
+                  System.out.println(":::::::::::::::::::::::::::::"
+                  +"::::::::::::::::::::::::::::::::::::");
+                  System.out.println(filename);
+                  System.out.println(":::::::::::::::::::::::::::::"
+                  +"::::::::::::::::::::::::::::::::::::");
+                  System.out.println();
+                  xref_file (filename, scan);
+                  scan.close ();
+               }catch (IOException error) {
+                  auxlib.warn (error.getMessage ());
+               }
+            } 
+         }
+      }
+      auxlib.exit ();
+   }
+}
+
+@
+
+
+1.17
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.16 2014-05-12 03:31:09-07 - - $
+d15 1
+a15 1
+         out.printf ("%s %s", key, value);
+d17 1
+a17 1
+         out.printf ("%n");
+d61 17
+a77 19
+              
+               String filename = args[argi];
+               if (filename.equals (STDIN_NAME)) {
+                  xref_file (STDIN_NAME, new Scanner (in));
+               }else {
+                  try {
+                     Scanner scan = new Scanner (new File (filename));
+                     System.out.println();
+                     System.out.println(":::::::::::::::::::::::::::::"
+                     +"::::::::::::::::::::::::::::::::::::");
+                     System.out.println(filename);
+                     System.out.println(":::::::::::::::::::::::::::::"
+                     +"::::::::::::::::::::::::::::::::::::");
+                     System.out.println();
+                     xref_file (filename, scan);
+                     scan.close ();
+                  }catch (IOException error) {
+                     auxlib.warn (error.getMessage ());
+                  }
+d79 1
+a79 1
+            
+@
+
+
+1.16
+log
+@-
+@
+text
+@d1 2
+a2 2
+// $Id: jxref.java,v 1.15 2014-05-12 03:21:07-07 - - $
+
+@
+
+
+1.15
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.14 2014-05-12 02:57:17-07 - - $
+d56 1
+d61 1
+a61 3
+            if (args[0].charAt(0)=='-'){options(args[0]);}
+          
+            else {  
+d81 1
+a81 1
+            }
+@
+
+
+1.14
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.13 2014-05-12 02:52:56-07 - - $
+a55 1
+      if(args[0].charAt(0)=='-'){options(args[0]);}
+d60 21
+a80 10
+            String filename = args[argi];
+            if (filename.equals (STDIN_NAME)) {
+               xref_file (STDIN_NAME, new Scanner (in));
+            }else {
+               try {
+                  Scanner scan = new Scanner (new File (filename));
+                  xref_file (filename, scan);
+                  scan.close ();
+               }catch (IOException error) {
+                  auxlib.warn (error.getMessage ());
+@
+
+
+1.13
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.12 2014-05-12 01:38:06-07 - - $
+d42 2
+a43 2
+               map.out(word, numberqueue);
+               numberqueue(linenr);
+@
+
+
+1.12
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.11 2014-05-12 00:58:33-07 - - $
+d6 1
+d28 3
+a30 2
+            new treemap <String, queue <Integer>> ();
+      for (int linenr = 1; scan.hasNextLine (); ++linenr) {
+d34 5
+a38 1
+               out.printf("%s: %d: %s%n", filename, linenr, word.toLowerCase());
+d41 3
+a43 1
+               out.printf("%s: %d: %s%n", filename, linenr, word);
+d47 4
+@
+
+
+1.11
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.10 2014-05-12 00:03:43-07 - - $
+d28 1
+a28 1
+      for (int linenr = 0; scan.hasNextLine (); ++linenr) {
+a31 1
+               treemap.put(linenr,word);
+@
+
+
+1.10
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.9 2014-05-11 23:39:56-07 - - $
+d32 1
+a32 1
+               map.put(linenr,word);
+@
+
+
+1.9
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.8 2014-05-11 23:37:09-07 - - $
+d32 2
+a33 1
+            out.printf("%s: %d: %s%n", filename, linenr, word.toLowerCase());
+d36 1
+a36 1
+            out.printf("%s: %d: %s%n", filename, linenr, word);
+@
+
+
+1.8
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.7 2014-05-11 22:55:39-07 - - $
+d44 1
+a44 1
+      if(args[0].contains("-")){options(args[0]);}
+@
+
+
+1.7
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.6 2014-05-11 22:25:47-07 - - $
+a64 1
+
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.5 2014-05-11 22:16:16-07 - - $
+d28 1
+a28 1
+      for (int linenr = 1; scan.hasNextLine (); ++linenr) {
+d31 1
+a31 1
+            if (lowercase=true){
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.4 2014-05-11 22:09:45-07 - - $
+d32 1
+a32 1
+            out.printf("%s: %d: %s%n ", filename, linenr, word.toLowerCase());
+d35 1
+a35 1
+            out.printf ("%s: %d: %s%n", filename, linenr, word);
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.3 2014-05-11 21:25:43-07 - - $
+d20 1
+a20 1
+   static boolean options(String option){
+a22 1
+      return debug && lowercase;
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.2 2014-05-11 21:18:12-07 - - $
+d46 1
+a46 1
+      if (args.length == 0) {
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.1 2014-05-11 21:17:22-07 - - $
+d32 1
+a32 1
+            if (lower=true){
+d45 1
+a45 1
+      if(args[0].contains("-")){options(arg[0]);}
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jxref.java,v 1.1 2014-01-16 17:44:47-08 - - $
+d21 2
+a22 2
+      if(option.contains("d") {debug = true;}
+      if(option.contains("f") {lowercase = true;}
+d45 1
+a45 1
+      if(args[0].contains("-"){options(arg[0]);}
+@

@@ -1,0 +1,45 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.2
+date	2014.01.29.01.52.31;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.04.24.01.42.41;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@#!/bin/sh
+# $Id: mk,v 1.1 2013-04-23 18:42:41-07 - - $
+cid + $0 *.c *.perl
+mkt *.c
+@
+
+
+1.1
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mklis,v 1.2 2013-01-29 14:59:20-08 - - $
+a4 1
+mkpspdf pmatch.perl.ps pmatch.perl
+@

@@ -1,0 +1,185 @@
+head	1.6;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.6
+date	2014.02.14.02.33.45;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2014.02.14.02.32.18;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2013.05.01.20.19.12;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2012.11.08.02.17.54;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2012.11.08.02.12.06;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2012.11.08.02.11.23;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@-
+@
+text
+@// $Id: jbox.java,v 1.5 2014-02-13 18:32:18-08 - - $
+
+// Java equivalent of the cbox example.
+// For brevity we put all of the classes on one file.
+
+import static java.lang.System.*;
+
+interface jbox {
+   public int get();
+   public void put (int value);
+}
+
+class jbox_code implements jbox {
+   private int value;
+
+   jbox_code() {
+      this (0);
+   }
+
+   jbox_code (int value_) {
+      value = value_;
+   }
+
+   public int get() {
+      return value;
+   }
+
+   public void put (int value_) {
+      value = value_;
+   }
+
+}
+
+class jbox_main {
+   public static void main (String[] args) {
+      jbox box = new jbox_code();
+      out.printf ("box = %s%n", box);
+      box.put (1024);
+      out.printf ("box value is %d\n", box.get());
+   }
+}
+
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jbox.java,v 1.4 2013-05-01 13:19:12-07 - - $
+d3 1
+a3 1
+// Java equivalent of the intx example.
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jbox.java,v 1.3 2012-11-07 18:17:54-08 - - $
+a7 9
+class jbox_main {
+   public static void main (String[] args) {
+      jbox box = new jbox_code();
+      out.printf ("box = %s%n", box);
+      box.put (1024);
+      out.printf ("box value is %d\n", box.get());
+   }
+}
+
+d34 9
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jbox.java,v 1.2 2012-11-07 18:12:06-08 - - $
+d29 2
+a30 2
+   jbox_code (int _value) {
+      value = _value;
+d37 2
+a38 2
+   public void put (int _value) {
+      value = _value;
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jbox.java,v 1.1 2012-11-07 18:11:23-08 - - $
+d10 1
+a10 1
+      jbox box = new jbox_implementation();
+d22 1
+a22 1
+class jbox_implementation implements jbox {
+d25 1
+a25 1
+   jbox_implementation() {
+d29 1
+a29 1
+   jbox_implementation (int _value) {
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: jmain.java,v 1.1 2012-11-07 18:07:21-08 - - $
+d25 1
+a25 1
+   jbox_int() {
+d29 1
+a29 1
+   jbox_int (int _value) {
+@

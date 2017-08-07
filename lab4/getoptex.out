@@ -1,0 +1,6 @@
+ignore_case = true
+filenames_only = false
+number_lines = true
+operand[2] = "foo"
+operand[3] = "bar"
+operand[4] = "baz"

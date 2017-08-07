@@ -1,0 +1,60 @@
+//KHOA LUONG KLUON7
+CSOURCE=err2.c EXECBIN=err2
+err2.c: In function ‘main’:
+err2.c:6:14: warning: initialization makes pointer from integer without a cast [enabled by default]
+    char *p = 20;
+              ^
+============================================================
+CSOURCE=err.c EXECBIN=err
+err.c: In function ‘foo’:
+err.c:6:9: warning: unused variable ‘p’ [-Wunused-variable]
+    int *p = &x;
+         ^
+err.c: In function ‘bar’:
+err.c:11:11: warning: ‘a’ is used uninitialized in this function [-Wuninitialized]
+    printf ("%d %p\n", a, p);
+           ^
+err.c:11:11: warning: ‘p’ is used uninitialized in this function [-Wuninitialized]
+============================================================
+CSOURCE=list1.c EXECBIN=list1
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+============================================================
+CSOURCE=list2.c EXECBIN=list2
+list2.c: In function ‘main’:
+list2.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:11: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+           ^
+uninit.c:11:11: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+           ^
+============================================================

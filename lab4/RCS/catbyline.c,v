@@ -1,0 +1,197 @@
+head	1.5;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.5
+date	2014.01.29.01.59.24;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2013.04.24.01.29.11;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2013.04.24.01.18.47;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2013.01.29.22.47.43;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.01.29.22.37.23;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.5
+log
+@-
+@
+text
+@// $Id: catbyline.c,v 1.4 2013-04-23 18:29:11-07 - - $
+
+//
+// NAME
+//    catbyline - example of simple cat to display files
+//
+// SYNOPSIS
+//    catbyline [filename...]
+//
+// DESCRIPTION
+//    Uses fgets to read lines from files and prints to stdout.
+//    If no filenames are specified, reads stdin.
+//    Does not consider whether input buffer is too short.
+//
+
+#include <errno.h>
+#include <libgen.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char *program_name = NULL;
+int exit_status = EXIT_SUCCESS;
+#define STDIN_NAME "-"
+
+void catbyline (FILE *input, char *filename) {
+   char buffer[1024];
+   printf ("FILE %s:\n", filename);
+   for (int linenr = 1;; ++linenr) {
+      char *buf = fgets (buffer, sizeof buffer, input);
+      if (buf == NULL) break;
+      printf ("%6d: %s", linenr, buf);
+   }
+}
+
+
+int main (int argc, char **argv) {
+   program_name = basename (argv[0]);
+   if (argc == 1) {
+      catbyline (stdin, STDIN_NAME);
+   }else {
+      for (int argi = 1; argi < argc; ++argi) {
+         char *filename = argv[argi];
+         if (strcmp (filename, STDIN_NAME) == 0) {
+            catbyline (stdin, STDIN_NAME);
+         }else {
+            FILE *input = fopen (filename, "r");
+            if (input != NULL) {
+               catbyline (input, filename);
+               fclose (input);
+            }else {
+               exit_status = EXIT_FAILURE;
+               fflush (NULL);
+               fprintf (stderr, "%s: %s: %s\n", program_name,
+                        filename, strerror (errno));
+               fflush (NULL);
+            }
+         }
+      }
+   }
+   return exit_status;
+}
+
+//TEST// cal 9 1752 >cal.1752.09; cal 4 2013 >cal.2013.04
+//TEST// catbyline cal.1752.09 cal.2013.04 >catbyline.out
+//TEST// mkpspdf catbyline.ps catbyline.c* catbyline.out*
+
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: catbyline.c,v 1.3 2013-04-23 18:18:47-07 - - $
+d12 2
+a13 2
+//    If no filenames are specified, reads stdin.  Does not consider
+//    whether input buffer is too short.
+d36 1
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: catbyline.c,v 1.2 2013-01-29 14:47:43-08 - - $
+d26 1
+a26 1
+void catbyline (FILE *input) {
+d28 1
+d39 1
+a39 1
+      catbyline (stdin);
+d44 1
+a44 1
+            catbyline (stdin);
+d48 1
+a48 1
+               catbyline (input);
+d63 4
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: catbyline.c,v 1.1 2013-01-29 14:37:23-08 - - $
+d28 1
+a28 1
+   for (;;) {
+d31 1
+a31 1
+      fputs (buffer, stdout);
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: linecat.c,v 1.3 2013-01-29 14:31:11-08 - - $
+d5 1
+a5 1
+//    linecat - example of simple cat to display files
+d8 1
+a8 1
+//    linecat [filename...]
+d26 1
+a26 1
+void linecat (FILE *input) {
+d38 1
+a38 1
+      linecat (stdin);
+d43 1
+a43 1
+            linecat (stdin);
+d47 1
+a47 1
+               linecat (input);
+@

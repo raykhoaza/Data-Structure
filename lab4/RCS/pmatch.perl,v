@@ -1,0 +1,136 @@
+head	1.4;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.4
+date	2013.02.05.19.33.55;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2013.01.29.23.05.26;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2013.01.29.22.17.33;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.01.29.22.03.27;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@-
+@
+text
+@#!/usr/bin/perl
+# $Id: pmatch.perl,v 1.3 2013-01-29 15:05:26-08 - - $
+
+use strict;
+use warnings;
+use Getopt::Std;
+
+$0 =~ s|^.*/||;
+my $exit_status = 0;
+END {exit $exit_status}
+sub note(@@) {print STDERR "$0: @@_"};
+$SIG{'__WARN__'} = sub {note @@_; $exit_status = 1};
+$SIG{'__DIE__'} = sub {warn @@_; exit};
+
+my %opts;
+getopts "iln", \%opts;
+print STDERR "Usage: $0 [-iln] string [filename...]\n"
+      and $exit_status = 1 and exit
+      unless @@ARGV > 0;
+my $string = shift @@ARGV;
+
+push @@ARGV, "-" unless @@ARGV;
+for my $filename (@@ARGV) {
+   open my $file, "<$filename" or warn "$filename: $!\n" and next;
+   my $filematched;
+   for (my $linenr = 1; defined (my $line = <$file>); ++$linenr) {
+      my $matched = $opts{"i"} ? index (lc $line, lc $string) >= 0
+                               : index ($line, $string) >= 0;
+      if ($matched) {
+         $filematched = 1;
+         unless ($opts{"l"}) {
+            print "$filename:" if @@ARGV > 1;
+            print "$linenr:" if $opts{"n"};
+            print $line;
+         }
+      }
+   }
+   print "$filename\n" if $opts{"l"} and $filematched;
+   close $file;
+}
+
+@
+
+
+1.3
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: pmatch.perl,v 1.2 2013-01-29 14:17:33-08 - - $
+d17 2
+a18 1
+print STDERR "Usage: $0 [-iln] string [filename...]\n" and exit 1
+@
+
+
+1.2
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: pmatch.perl,v 1.1 2013-01-29 14:03:27-08 - - $
+d26 2
+a27 2
+      my $matched = $opts{"i"} ? index (lc $string, lc $line) >= 0
+                               : index ($string, $line) >= 0;
+@
+
+
+1.1
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id$
+d11 1
+a11 1
+sub note(@@) {print STDERR "@@_"};
+a19 1
+$string = lc $string if $opts{"i"};
+d23 1
+a23 2
+   my %xref;
+   open my $file, "<$filename" or warn "$0: $filename: $!\n" and next;
+d26 3
+a28 3
+      chomp $line;
+      my $cmpline = $opts{"i"} ? lc $line : $line;
+      if (index ($cmpline, $string) >= 0) {
+d33 1
+a33 1
+            print "$line\n";
+@

@@ -1,0 +1,9 @@
+//KHOA LUONG KLUON7
+Script started on Wed 07 May 2014 09:00:58 PM PDT
+You are currently using 19% (91.2 MiB) of your 488.3 MiB quota.
+]0;kluon7@unix2:code[kluon7@unix2 code]$ valgrind --leak-check=full list3 foo bar baz qux
+valgrind: list3: command not found
+]0;kluon7@unix2:code[kluon7@unix2 code]$  list3: command not found[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kexit
+exit
+
+Script done on Wed 07 May 2014 09:01:50 PM PDT

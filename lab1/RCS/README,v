@@ -1,0 +1,26 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2014.04.08.00.38.05;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@Name: Khoa Luong
+Username: kluon7
+host: unix2.lt.ucsc.edu
+@

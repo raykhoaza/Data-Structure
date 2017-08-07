@@ -1,0 +1,28 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.1
+date	2011.04.30.02.46.42;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@// $Id$
+
+int main (int argc, char **argv) {
+}
+
+@

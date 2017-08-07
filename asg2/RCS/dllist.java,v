@@ -1,0 +1,997 @@
+head	1.37;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.37
+date	2014.04.29.03.32.21;	author -;	state -;
+branches;
+next	1.36;
+
+1.36
+date	2014.04.29.03.30.19;	author -;	state -;
+branches;
+next	1.35;
+
+1.35
+date	2014.04.29.02.17.47;	author -;	state -;
+branches;
+next	1.34;
+
+1.34
+date	2014.04.29.02.17.04;	author -;	state -;
+branches;
+next	1.33;
+
+1.33
+date	2014.04.29.01.58.51;	author -;	state -;
+branches;
+next	1.32;
+
+1.32
+date	2014.04.29.01.54.47;	author -;	state -;
+branches;
+next	1.31;
+
+1.31
+date	2014.04.29.01.50.26;	author -;	state -;
+branches;
+next	1.30;
+
+1.30
+date	2014.04.29.01.48.56;	author -;	state -;
+branches;
+next	1.29;
+
+1.29
+date	2014.04.29.01.46.12;	author -;	state -;
+branches;
+next	1.28;
+
+1.28
+date	2014.04.29.01.38.10;	author -;	state -;
+branches;
+next	1.27;
+
+1.27
+date	2014.04.29.01.35.15;	author -;	state -;
+branches;
+next	1.26;
+
+1.26
+date	2014.04.29.01.33.35;	author -;	state -;
+branches;
+next	1.25;
+
+1.25
+date	2014.04.29.01.32.03;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2014.04.29.01.29.31;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2014.04.29.01.28.37;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2014.04.29.01.23.30;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2014.04.29.01.02.52;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2014.04.29.01.01.17;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2014.04.29.00.55.33;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2014.04.29.00.50.30;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2014.04.29.00.47.16;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2014.04.29.00.45.47;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2014.04.28.23.13.30;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2014.04.28.13.30.58;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2014.04.28.13.15.08;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2014.04.28.13.02.17;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2014.04.28.12.11.49;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2014.04.28.11.57.57;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2014.04.28.11.57.10;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2014.04.28.11.50.50;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2014.04.28.11.50.07;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2014.04.28.10.44.42;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2014.04.28.10.41.14;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2014.04.28.10.00.46;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2014.04.28.09.59.55;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2014.04.28.09.58.50;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2014.04.28.09.57.59;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.37
+log
+@-
+@
+text
+@// $Id: dllist.java,v 1.36 2014-04-28 20:30:19-07 - - $
+
+class dllist {
+
+   public enum position {FIRST, PREVIOUS, FOLLOWING, LAST};
+
+   private class node {
+      String item;
+      node prev;
+      node next;
+   }
+
+   private node first = null;
+   private node current = null;
+   private node last = null;
+   //private node tmp = null;
+   private int currentposition = 0;
+
+   public void printall(){
+      node tmp = first;
+      while(tmp.next!=null){
+         System.out.format("%s\n", tmp.item);
+         tmp = tmp.next;
+      }
+         System.out.format("%s\n", tmp.item);
+   }
+   
+   public void printline(){
+      System.out.format("%s\n", getitem());
+   }
+   
+   public void setposition (position pos) {
+      switch (pos) {
+      case FIRST: if (isempty()){break;}
+                  current = first;
+                  break;
+      case PREVIOUS: 
+         if (isempty()){break;}
+         if (current.prev != null){
+            current = current.prev;
+            currentposition-=1;
+         }
+         break;
+      case FOLLOWING: 
+         if (isempty()){break;}
+         if (current.next != null){
+            current = current.next;
+            currentposition+=1;
+         }
+         break;
+      case LAST: if (isempty()){break;}
+                 current = last;
+                 break;
+      }
+   }
+
+   public boolean isempty () {
+      return (current==null);
+   }
+
+   public String getitem () {
+      return (current.item);
+   }
+
+   public int getposition () {
+      return (currentposition);
+   }
+
+   public void delete () {
+      if(current.next==null){
+         current = current.prev;
+         if(current!=null)
+            current.next=null;
+         last = current;
+      }
+      else if (current.prev==null){
+         current = current.next;
+         if(current!=null) current.prev = null;
+         first = current;
+      }
+      else {
+         current.next.prev = current.prev;
+         if (current.prev!=null){
+            current.prev.next = current.next;
+         current = current.next;
+         }
+         if (current.prev == null){
+            first = current;
+         }
+      }
+   }
+
+   public void insert (String item, position pos) {
+      if (isempty()){
+         current = new node();
+         current.item = item;
+         currentposition = 0;
+         first = last = current;
+         return;
+      }
+      node tmp = new node();
+      tmp.item = item;
+      switch (pos){
+         case FIRST: setposition(pos);
+                     current.prev = tmp;
+                     tmp.next = current;
+                     tmp.prev = null;
+                     setposition(pos);
+                     break;
+         case PREVIOUS:
+                        if (current.prev == null){
+                           current.prev = tmp;
+                           tmp.next = current;
+                           tmp.prev = null; 
+                           current = tmp;
+                           first = tmp;
+                        }
+                        else {
+                           current.prev.next = tmp;
+                           tmp.prev = current.prev;
+                           tmp.next = current;
+                           current.prev = tmp;
+                           current = tmp;
+                        }
+                         
+                        break;
+         case FOLLOWING:
+                         if (current.next==null){
+                            current.next = tmp;
+                            tmp.next = null;
+                            tmp.prev = current;
+                            current = tmp;
+                            last = tmp;
+                         }
+                         else {
+                            current.next.prev = tmp;
+                            tmp.next = current.next;
+                            current.next = tmp;
+                            tmp.prev = current;
+                            current = tmp;
+                         }
+                         break;
+         case LAST: last.next = tmp;
+                    tmp.prev = last;
+                    tmp.next = null;
+                    last = tmp;
+                    current = tmp;
+                    break;
+      }
+   }
+}
+
+@
+
+
+1.36
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.33 2014-04-28 18:58:51-07 - - $
+d77 3
+a79 2
+         current.next = current;
+         current.prev = null;
+@
+
+
+1.35
+log
+@-
+@
+text
+@d76 4
+@
+
+
+1.34
+log
+@-
+@
+text
+@d25 1
+a25 1
+         System.out.format("hello!: %s\n", tmp.item);
+@
+
+
+1.33
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.32 2014-04-28 18:54:47-07 - - $
+d22 1
+a22 1
+         System.out.format("hello!: %s\n", tmp.item);
+@
+
+
+1.32
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.31 2014-04-28 18:50:26-07 - - $
+d138 2
+a139 3
+         case LAST: setposition(pos);
+                    current.next = tmp;
+                    tmp.prev = current;
+d141 2
+a142 1
+                    setposition(pos);
+@
+
+
+1.31
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.30 2014-04-28 18:48:56-07 - - $
+d111 1
+d128 1
+@
+
+
+1.30
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.29 2014-04-28 18:46:12-07 - - $
+d96 2
+a99 1
+                     node tmp = new node();
+a102 1
+                     tmp.item = item;
+d105 1
+a105 1
+         case PREVIOUS: node tmp = new node();
+a109 1
+                           tmp.item = item;
+a116 1
+                           tmp.item = item;
+d121 1
+a121 1
+         case FOLLOWING: node tmp = new node();
+a125 1
+                            tmp.item = item;
+a132 1
+                            tmp.item = item;
+a136 1
+                    node tmp = new node();
+a139 1
+                    tmp.item = item;
+@
+
+
+1.29
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.28 2014-04-28 18:38:10-07 - - $
+d16 1
+a16 1
+   private node tmp = null;
+d98 1
+a98 1
+                     tmp = new node();
+d105 1
+a105 1
+         case PREVIOUS: tmp = new node();
+d123 1
+a123 1
+         case FOLLOWING: tmp = new node();
+d141 1
+a141 1
+                    tmp = new node();
+@
+
+
+1.28
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.27 2014-04-28 18:35:15-07 - - $
+d35 1
+a35 1
+                  first = current;
+d39 3
+a41 3
+         if (current.prev == null){
+            first = current;
+            break;
+a42 2
+         currentposition-=1;
+         current = current.prev;
+d46 3
+a48 3
+         if (current.next == null){
+            last = current;
+            break;
+a49 2
+         currentposition+=1;
+         current = current.next;
+d52 1
+a52 1
+                 last = current;
+@
+
+
+1.27
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.26 2014-04-28 18:33:35-07 - - $
+d25 1
+@
+
+
+1.26
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.25 2014-04-28 18:32:03-07 - - $
+d20 4
+a23 4
+      setposition(position.FIRST);
+      while(current.next!=null){
+         System.out.format("hello!: %s\n", current.item);
+         setposition(position.FOLLOWING);
+@
+
+
+1.25
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.24 2014-04-28 18:29:31-07 - - $
+d22 1
+a22 1
+         System.out.format("%s\n", current.item);
+@
+
+
+1.24
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.23 2014-04-28 18:28:37-07 - - $
+d23 1
+a23 1
+         current = current.next;
+@
+
+
+1.23
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.22 2014-04-28 18:23:30-07 - - $
+d22 1
+a22 1
+         System.out.format("%s\n", current.getitem());
+@
+
+
+1.22
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.21 2014-04-28 18:02:52-07 - - $
+d22 1
+a22 1
+         System.out.format("%s\n", getitem());
+@
+
+
+1.21
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.20 2014-04-28 18:01:17-07 - - $
+d22 1
+a22 1
+         System.out.format("%s\n", current.item);
+d28 1
+a28 1
+      System.out.format("%s\n", current.item);
+@
+
+
+1.20
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.19 2014-04-28 17:55:33-07 - - $
+d97 1
+a97 1
+         break;
+@
+
+
+1.19
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.18 2014-04-28 17:50:30-07 - - $
+d97 1
+d107 1
+d150 1
+@
+
+
+1.18
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.17 2014-04-28 17:47:16-07 - - $
+d109 2
+a110 1
+                           tmp.next = current; 
+d125 14
+a138 2
+                         if (current.next!=null){
+                         current.next.prev = tmp;
+a139 6
+                         tmp.next = current.next;
+                         current.next = tmp;
+                         tmp.prev = current;
+                         tmp.item = item;
+                         currentposition += 1;
+                         current = tmp;
+@
+
+
+1.17
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.16 2014-04-28 17:45:47-07 - - $
+d109 2
+a110 1
+                           tmp.next = current;
+@
+
+
+1.16
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.15 2014-04-28 16:13:30-07 - - $
+a109 1
+                           tmp.prev = null;
+@
+
+
+1.15
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.13 2014-04-28 06:15:08-07 - - $
+d27 2
+a28 2
+   public String printline(){
+      return (current.item);
+d107 7
+a113 1
+                        if (current.prev!=null){
+d115 5
+d121 1
+a121 6
+                        tmp.prev = current.prev;
+                        tmp.next = current;
+                        current.prev = tmp;
+                        tmp.item = item;
+                        currentposition -= 1;
+                        current = tmp;
+@
+
+
+1.14
+log
+@-
+@
+text
+@d19 1
+a19 1
+   public void print(){
+d27 4
+d33 1
+a33 4
+      case FIRST: currentposition = 0;
+                  while(current.prev!=null){
+                  current = current.prev;
+                  }
+a38 1
+            currentposition = 0;
+a54 3
+                 while(current.next!=null){
+                    current = current.next;
+                 }
+@
+
+
+1.13
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.12 2014-04-28 06:02:17-07 - - $
+d22 1
+a22 1
+         System.out.format("%s", current.item);
+d110 3
+a112 1
+                        current.prev.next = tmp;
+d121 1
+d123 1
+@
+
+
+1.12
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.11 2014-04-28 05:11:49-07 - - $
+d26 1
+a26 10
+
+   public String printline(){
+      if(!isempty()){
+         return (current.item);
+      }
+      else {
+         return (null);
+      }
+   }
+
+@
+
+
+1.11
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.10 2014-04-28 04:57:57-07 - - $
+d19 17
+@
+
+
+1.10
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.9 2014-04-28 04:57:10-07 - - $
+d94 7
+a100 1
+         case FIRST:
+d119 7
+a125 1
+         case LAST:
+@
+
+
+1.9
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.8 2014-04-28 04:50:50-07 - - $
+d25 1
+d50 1
+@
+
+
+1.8
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.7 2014-04-28 04:50:07-07 - - $
+d22 3
+a24 1
+                  current = first;
+d45 5
+a49 4
+      case LAST:
+         if (isempty()){break;}
+         current = last;
+         break;
+d70 1
+a70 1
+         current = last;
+d79 1
+a79 1
+            current = first;
+d100 1
+a100 1
+                        current = temp;
+d109 1
+a109 1
+                         current = temp;
+@
+
+
+1.7
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.6 2014-04-28 03:44:42-07 - - $
+a18 5
+   while(current.prev!=null){
+      current = current.prev;
+      current = last;
+   }
+
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.5 2014-04-28 03:41:14-07 - - $
+d19 5
+d31 5
+d41 4
+d101 2
+a102 1
+                        setposition (pos);
+d110 2
+a111 1
+                         setposition (pos);
+a115 1
+
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.4 2014-04-28 03:00:46-07 - - $
+d50 1
+a50 1
+      throw new UnsupportedOperationException();
+d88 1
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.3 2014-04-28 02:59:55-07 - - $
+d58 1
+d62 1
+a62 1
+         if (current.prev!=null)
+d65 4
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.2 2014-04-28 02:58:50-07 - - $
+d82 1
+a82 1
+                        setposition (POS);
+d88 2
+a89 2
+                         setposition (POS);
+                         current.item = item;
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.1 2014-04-28 02:57:59-07 - - $
+d82 1
+a82 1
+                        setposition (PREVIOUS);
+d88 1
+a88 1
+                         setposition (FOLLOWING);
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: dllist.java,v 1.1 2014-04-10 17:01:54-07 - - $
+d80 1
+a80 1
+                        current.prev = temp;
+@
